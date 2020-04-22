@@ -48,6 +48,7 @@ class Song
     all.sort_by{|x| x.name}
   end 
   
+<<<<<<< HEAD
 # rows = csv_data.split("\n")
 # people = rows.collect do |row|
 #   data = row.split(", ")
@@ -59,10 +60,24 @@ class Song
 #   person.age = age
 #   person.company = company
 #   person
+=======
+rows = csv_data.split("\n")
+people = rows.collect do |row|
+  data = row.split(", ")
+  name = data[0]
+  age = data[1]
+  company = data[2]
+  person = Person.new
+  person.name = name
+  person.age = age
+  person.company = company
+  person
+>>>>>>> 99c603ae703b011d4bd7205f1410868b6bd7739e
   
   
   def self.new_from_filename(filename)
     song = self.new
+<<<<<<< HEAD
     data = filename.split(/\ - |\.mp3/)
     name = data[1]
     artist_name = data[0]
@@ -80,4 +95,10 @@ class Song
     all.clear 
   end
   
+=======
+    # filename.split(/\ - |\.mp3/)
+    binding.pry
+  end 
+  
+>>>>>>> 99c603ae703b011d4bd7205f1410868b6bd7739e
 end
